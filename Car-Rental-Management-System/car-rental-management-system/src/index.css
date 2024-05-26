@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 56px; /* Adjust this value based on the actual height of your navbar */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Enhance the overall navbar appearance */
+.navbar {
+  background-color: #343a40; /* A darker shade for more elegance */
+  padding: 0.5rem 1rem; /* Reduce padding for a tighter design */
+}
+
+
+/* Navbar brand styling for a unique look */
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem; /* Larger size for brand */
+  color: #f8f9fa !important; /* Ensure the brand is white */
+  transition: transform 0.2s; /* Smooth transform on hover */
+  margin-right: auto;
+}
+.navbar-collapse {
+  flex-grow: 0; /* Prevents the navbar from stretching too far on larger screens */
+}
+
+
+
+.navbar-brand:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Link styling */
+.nav-link {
+  font-size: 1.1rem; /* Slightly larger text for readability */
+  transition: color 0.2s; /* Smooth color transition */
+  margin-left: 10px; /* Adds spacing to the left of each link */
+  margin-right: 10px; /* Adds spacing to the right of each link */
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center; /* Extra margin-top when navbar collapses on smaller screens */
+  }
+}
+.nav-link:hover, .nav-link:focus {
+  color: #cbd3da !important; /* A lighter color on hover */
+}
+
+/* Ensures the first link doesn't have extra space on the left */
+.nav-link:first-child {
+  margin-left: 0;
+}
+
+.nav-icon {
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-icon:hover {
+  color: #2980b9; /* Same hover color as used on the social media icons in the footer */
+}
+
+
+/* Ensures the last link doesn't have extra space on the right */
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+/* Responsive spacing adjustments for nav links */
+@media (max-width: 768px) {
+  .nav-link {
+    margin-left: 5px; /* Smaller margin on smaller screens */
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-link {
+    margin-left: 15px; /* Larger margin on larger screens */
+    margin-right: 15px;
+  }
+}
+
+
+/* Active link styling */
+.nav-link.active {
+  font-weight: bold;
+  color: #ffffff !important; /* Bright white for active page */
+}
+
+.carousel {
+  margin-top: -5px; /* Adjust this value as necessary to remove space */
+}
+.carousel-item img {
+  height: 628px; /* Fixed height for all images */
+  width: 100%; /* Ensures the image covers the full width of the carousel */
+  object-fit: cover; /* Adjust as necessary: cover, contain, etc. */
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background */
+  border-radius: 10px; /* Rounded corners for the caption box */
+  padding: 20px; /* More padding for better readability */
+}
+
+.carousel-caption h3 {
+  color: #fff; /* Ensures the title is white */
+  font-size: 2rem; /* Larger font size for the title */
+}
+
+.carousel-caption p {
+  color: #ccc; /* Light grey color for the text, enhances readability */
+  font-size: 1.2rem; /* Slightly larger font size for the text */
+}
+
+.carousel-control-prev, 
+.carousel-control-next {
+  background-color: black; /* Sets the background color of the control buttons to black */
+  border-radius: 50%; /* Optional: makes the buttons circular */
+  font-size: 24px; /* Adjust if necessary, depending on your design */
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+  /* Updated SVG with white arrow */
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="100%" height="100%" viewBox="0 0 8 8" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0L1.09 1.41L4.17 4.5L1.09 7.59L2.5 9L7 4.5L2.5 0Z"/></svg>');
+  width: 100%; /* Ensures the SVG fills the button */
+  height: 100%; /* Ensures the SVG fills the button */
+}
+
+.carousel-control-prev-icon {
+  transform: scaleX(-1); /* Flips the next icon for the prev button */
+}
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.admin-header {
+  background-color: #343a40;
+  color: #ecf0f1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.admin-header-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  color: #ecf0f1;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #2980b9;
+}
+
+.admin-main {
+  display: flex;
+  flex: 1;
+  margin-top: 80px; /* Adjusted for header height */
+}
+
+.admin-nav {
+  background-color: #343a40;
+  width: 250px;
+  padding-top: 20px;
+  height: calc(100vh - 69px); /* Adjusted for header height */
+  position: fixed;
+  top: 69px; /* Adjusted for header height */
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  justify-content: space-between; 
+}
+
+.year-text {
+  color: #ecf0f1;
+  text-align: center;
+  margin-top: auto;
+}
+
+.admin-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-nav li {
+  margin: 10px 0;
+}
+
+.admin-nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.admin-nav a:hover {
+  background-color: #202122;
+}
+
+.admin-nav .active-link {
+  background-color: #000000;
+  color: white; /* Change this to any color you prefer for the active link */
+}
+
+.admin-content {
+  margin-left: 240px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.admin-content h2 {
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.admin-content p {
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .admin-nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .admin-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .admin-content {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
+
